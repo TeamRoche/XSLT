@@ -28,5 +28,5 @@
 		-->
 		<xsl:apply-templates select="/hl7:ClinicalDocument/hl7:effectiveTime" mode="EnteredOn"/>
 	</xsl:template>
-	<!--New thing  -->
+	
 </xsl:stylesheet>
