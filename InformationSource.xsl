@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:isc="http://extension-functions.intersystems.com" xmlns:hl7="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exsl="http://exslt.org/common" exclude-result-prefixes="isc hl7 xsi exsl">
-
+<!--New thing  -->
 	<xsl:template match="*" mode="InformationSource">
 		<!--
 			Field : Patient Author
@@ -19,7 +19,7 @@
 			StructuredMappingRef: EnteredAt
 		-->
 		<xsl:apply-templates select="$defaultAuthorRootPath" mode="EnteredAt"/>
-		
+		<!--New thing  -->
 		<!--
 			Field : Patient Author Time
 			Target: HS.SDA3.Patient EnteredOn
@@ -28,4 +28,5 @@
 		-->
 		<xsl:apply-templates select="/hl7:ClinicalDocument/hl7:effectiveTime" mode="EnteredOn"/>
 	</xsl:template>
+	<!--New thing  -->
 </xsl:stylesheet>
